@@ -11,10 +11,10 @@ URL_WEATHER_SERVICE = 'http://api.openweathermap.org'
 class SmokeTests(unittest.TestCase):
 
     def setUp(self):
-        print ""
-        print "##############################################################"
-        print "#####", self.id()
-        print "##############################################################"
+        print("")
+        print("##############################################################")
+        print("#####", self.id())
+        print("##############################################################")
 
     def test_001_CheckTemperature(self):
         url = URL_WEATHER_SERVICE + '/data/2.5/weather?q=Sofia&appid=52d0bc04ffab9819a4b3900533f16f30&units=metric'
