@@ -9,9 +9,9 @@ def PrintStringOrJson(content_type, content):
     content = ''.join([i if 31 < ord(i) < 127 else ' ' for i in content])
     try:
         json_content = json.loads(content)
-    except:
-        print(json_content + ": ")
-        print(str(content))
+    except Exception as ex:
+        print("Json loads failed")
+        print("Exception: " + str(ex))
     else:
         print(content_type + "(JSON): ")
         print(json.dumps(json_content, sort_keys=True, indent=4, separators=(',', ': ')))

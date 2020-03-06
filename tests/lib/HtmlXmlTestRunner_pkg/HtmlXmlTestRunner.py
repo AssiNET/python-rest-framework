@@ -644,7 +644,7 @@ class _TestResult(TestResult):
         try:
             sys.stderr.write(bcolors.BOLD + "TEST STARTED: " + str(test) + bcolors.ENDC + '\n')
         except Exception as e:
-            print("Exception: " + e)
+            print("Exception: " + str(e))
 
         stdout_redirector.fp = self.outputBuffer
         stderr_redirector.fp = self.outputBuffer
